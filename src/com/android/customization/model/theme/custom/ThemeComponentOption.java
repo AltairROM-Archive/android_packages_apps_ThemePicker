@@ -146,8 +146,7 @@ public abstract class ThemeComponentOption implements CustomizationOption<ThemeC
             TextView title = container.findViewById(R.id.font_card_title);
             title.setTypeface(mHeadlineFont);
             TextView header = container.findViewById(R.id.theme_preview_card_header);
-            header.setText(String.format("%s\n(%s)",
-                    container.getContext().getString(R.string.preview_name_font), mLabel));
+            header.setText(container.getContext().getString(R.string.preview_name_font) + "\n\u0028" + mLabel + "\u0029");
             TextView bodyText = container.findViewById(R.id.font_card_body);
             bodyText.setTypeface(mBodyFont);
             container.findViewById(R.id.font_card_divider).setBackgroundColor(
@@ -227,8 +226,7 @@ public abstract class ThemeComponentOption implements CustomizationOption<ThemeC
             bindPreviewHeader(container, R.string.preview_name_icon, R.drawable.ic_wifi_24px);
 
             TextView header = container.findViewById(R.id.theme_preview_card_header);
-            header.setText(String.format("%s\n(%s)",
-                    container.getContext().getString(R.string.preview_name_icon), mLabel));
+            header.setText(container.getContext().getString(R.string.preview_name_icon) + "\n\u0028" + mLabel + "\u0029");
             ViewGroup cardBody = container.findViewById(R.id.theme_preview_card_body_container);
             if (cardBody.getChildCount() == 0) {
                 LayoutInflater.from(container.getContext()).inflate(
@@ -347,8 +345,7 @@ public abstract class ThemeComponentOption implements CustomizationOption<ThemeC
             bindPreviewHeader(container, R.string.preview_name_color, R.drawable.ic_colorize_24px);
 
             TextView header = container.findViewById(R.id.theme_preview_card_header);
-            header.setText(String.format("%s\n(%s)",
-                    container.getContext().getString(R.string.preview_name_color), mLabel));
+            header.setText(container.getContext().getString(R.string.preview_name_color) + "\n\u0028" + mLabel + "\u0029");
             ViewGroup cardBody = container.findViewById(R.id.theme_preview_card_body_container);
             if (cardBody.getChildCount() == 0) {
                 LayoutInflater.from(container.getContext()).inflate(
@@ -488,8 +485,7 @@ public abstract class ThemeComponentOption implements CustomizationOption<ThemeC
             bindPreviewHeader(container, R.string.preview_name_shape, R.drawable.ic_shapes_24px);
 
             TextView header = container.findViewById(R.id.theme_preview_card_header);
-            header.setText(String.format("%s\n(%s)",
-                    container.getContext().getString(R.string.preview_name_shape), mLabel));
+            header.setText(container.getContext().getString(R.string.preview_name_shape) + "\n\u0028" + mLabel + "\u0029");
             ViewGroup cardBody = container.findViewById(R.id.theme_preview_card_body_container);
             if (cardBody.getChildCount() == 0) {
                 LayoutInflater.from(container.getContext()).inflate(
